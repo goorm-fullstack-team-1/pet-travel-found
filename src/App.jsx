@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   let test = "test";
-  console.log("Logging test variable:", test);
+  console.log("test variable:", test);
 
   return (
     <>
