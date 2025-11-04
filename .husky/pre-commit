@@ -1,5 +1,3 @@
-#!/usr/bin/env sh
 # 커밋이 실행될 때 lint-staged를 통해 검사하고, 실패 시 커밋을 중단합니다.
-. "$(dirname -- "$0")/_/husky.sh"
-
+#!/usr/bin/env sh
 pnpm lint-staged
