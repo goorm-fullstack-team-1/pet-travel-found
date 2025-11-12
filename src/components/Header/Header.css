@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul > li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header_inner {
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.header_inner  > .nav > ul{
+    display: flex;
+    gap: 32px;
+}
+
+.header_inner  > .nav > ul > li {
+    font-family: Noto Sans KR;
+    font-weight: 500;
+    font-size: 14px;
+}
