@@ -6,9 +6,8 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  let jthTest = "jthTest";
-  console.log("Logging test variable: ", jthTest);
-
+  let test = "test";
+  console.log(test);
   return (
     <>
       <div>
