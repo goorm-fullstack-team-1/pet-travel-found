@@ -34,3 +34,22 @@ a {
     font-weight: 500;
     font-size: 14px;
 }
+
+.auth_button {
+    background-color: #2F5B4E;
+    padding: 10px 0;
+    border: none;
+    border-radius: 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100px;
+}
+
+.auth_button:hover {
+  background-color: #436B5E;
+}

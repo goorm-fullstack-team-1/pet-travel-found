@@ -23,9 +23,9 @@ const Header = () => {
               <Link to="/my-page">마이페이지</Link>
             </li>
             <li>
-              <Button>
+              <Button className="auth_button">
                 <img src={AuthIcon} alt="auth-icon" title="auth-icon" />
-                로그인
+                로그아웃
                 {/* TODO: 추후에는 로그인 상태에 따라 동적으로 '로그인' 또는 '로그아웃' 텍스트가 보이도록 수정해야함. */}
               </Button>
             </li>
