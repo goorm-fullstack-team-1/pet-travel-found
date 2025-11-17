@@ -13,6 +13,11 @@ a {
     color: inherit;
 }
 
+header {
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
 .header_inner {
     width: 1200px;
     height: 80px;
