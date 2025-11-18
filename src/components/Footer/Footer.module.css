@@ -1,9 +1,12 @@
+footer{
+    background-color: #FFFFFF;
+}
+
 .footer_inner {
     width: 1200px;
     height: 80px;
     margin: 0 auto;
     color: #62847A;
-    background-color: #FFFFFF;
     display : flex;
     align-items: center;
     justify-content: center;
