@@ -12,14 +12,14 @@ const Login = () => {
 
   return (
     <AuthFrom textInfo={textInfo}>
-      <label htmlFor="email"></label>
+      <label htmlFor="email">이메일</label>
       <input
         type="email"
         placeholder="이메일"
         className={styles.auth_input}
         id="email"
       />
-      <label htmlFor="password"></label>
+      <label htmlFor="password">비밀번호</label>
       <input
         type="password"
         placeholder="비밀번호"

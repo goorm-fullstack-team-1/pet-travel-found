@@ -6,10 +6,10 @@ const AuthFrom = ({ textInfo, children }) => {
 
   return (
     <form className={styles.form}>
-      <p>{title}</p>
-      <p>{description}</p>
+      <p className={styles.title}>{title}</p>
+      <p className={styles.desc}>{description}</p>
       <div className={styles.fields}>{children}</div>
-      <p>
+      <p className={styles.footer_text}>
         {lastMessage}{" "}
         {title === "로그인" ? (
           <Link to="/auth/register">회원가입</Link>
