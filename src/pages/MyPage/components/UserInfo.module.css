@@ -1,3 +1,94 @@
 .user-info {
-  
+  background-color: #FFFFFF;
+  margin-top: 40px;
+  width: 275px;
+  height: 350px;
+  border-radius: 15px;
+  border: 1px solid #E8E3D9;
+  padding: 20px;
+}
+
+.user-info__header {
+  display: flex;
+  align-items: center;
+}
+
+.user-info__header img {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.user-info__header h1 {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.user-info__block {
+  margin-top: 20px;
+  background-color: #EDE9DE;
+  border-radius: 15px;
+  border: 1px solid #E8E3D9;
+  padding: 12px;
+}
+
+.user-info__block h2 {
+  font-weight: 500;
+  font-size: 16px;
+  color: #1D3931;
+}
+
+.user-info__block p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #62847A;
+}
+
+.user-info__block:nth-child(3) {
+  text-align: center;
+}
+
+.user-info__block:nth-child(3)::before {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #2F5B4E;
+  mask-image: url("../../../assets/images/icons/calendar_icon.svg");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  margin: 0 auto;
+  margin-bottom: 3px;
+}
+
+.user-info__button {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #F9F7F0;
+  border: 1px solid #E8E3D9;
+  border-radius: 15px;
+  font-weight: 00;
+  color: #1D3931;
+}
+
+.user-info__button::before {
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #1D3931;
+  mask-image: url("../../../assets/images/icons/auth_icon.svg");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  margin-right: 8px;
+}
+
+.user-info__button:hover {
+  background-color: #EDE9DE;
 }

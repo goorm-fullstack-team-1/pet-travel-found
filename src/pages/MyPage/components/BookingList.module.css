@@ -1,3 +1,115 @@
-.booking-list {
 
+.booking-item {
+  background-color: #FFFFFF;
+  width: 895px;
+  border-radius: 15px;
+  border: 1px solid #E8E3D9;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.booking-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.booking-item__header h1 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.booking-item__status-tag {
+  background-color: #2F5B4E;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 12px;
+  width: 68px;
+  cursor: default;
+}
+
+.booking-item__body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 23px;
+}
+
+.booking-item__info {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+
+.booking-item__period-group {
+  display: flex;
+  color: #1D3931;
+  width: 50%;
+}
+
+.booking-item__period-group::before {
+  mask-image: url("../../../assets/images/icons/calendar_icon.svg");
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #1D3931;
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  margin-top: 3px;
+  margin-right: 8px;
+}
+
+.booking-item__period {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-item__check-dates {
+  font-weight: 500;
+  color: #1D3931;
+}
+
+.booking-item__night-count {
+  color: #62847A;
+}
+
+.booking-item__head-count {
+  display: flex;
+  flex-direction: row;
+}
+
+.booking-item__head-count::before {
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #1D3931;
+  mask-image: url("../../../assets/images/icons/users_icon.svg");
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  margin-top: 3px;
+  margin-right: 8px;
+}
+
+.booking-item__summary {
+  border-top: 1px solid #E8E3D9;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-item__date {
+  margin-top: 12px;
+  color: #62847A;
+  font-size: 14px;
+}
+
+.booking-item__price {
+  margin-top: 12px;
+  color: #2F5B4E;
+  font-weight: 600;
+  font-size: 18px;
 }
