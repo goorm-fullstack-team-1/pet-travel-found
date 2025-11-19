@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import styles from "./AuthForm.module.css";
 
-const AuthFrom = ({ textInfo, children }) => {
+const AuthFrom = ({ textInfo, children, onSubmit }) => {
   const { title, description, lastMessage } = textInfo;
 
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={onSubmit}>
       <p className={styles.title}>{title}</p>
       <p className={styles.desc}>{description}</p>
       <div className={styles.fields}>{children}</div>
