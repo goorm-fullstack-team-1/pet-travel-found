@@ -29,8 +29,12 @@ const Header = () => {
               <Button
                 className={styles.auth_button}
                 onClick={() => {
-                  logout();
-                  window.location.href = "/auth/login";
+                  if (isLoggedIn) {
+                    logout();
+                    window.location.href = "/";
+                  } else {
+                    window.location.href = "/auth/login";
+                  }
                 }}
               >
                 <img src={AuthIcon} alt="auth-icon" title="auth-icon" />
