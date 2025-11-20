@@ -28,7 +28,9 @@ export const login = async (user) => {
   }
 
   sessionStorageService.setStorageItem("isLoggedIn", true);
-  sessionStorageService.setStorageItem("user", user);
+  // 세션에는 비밀번호를 포함하지 않은 정보만 저장
+  const { name, email } = existingUser;
+  sessionStorageService.setStorageItem("user", { name, email });
 };
 
 /**
