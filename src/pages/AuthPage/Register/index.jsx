@@ -1,6 +1,6 @@
 import Button from "../../../components/Button/Button";
 import styles from "./Register.module.css";
-import AuthFrom from "../components/AuthForm";
+import AuthForm from "../components/AuthForm";
 import { useState } from "react";
 import { setUser } from "../../../services/auth/authService";
 
@@ -28,7 +28,7 @@ const Register = () => {
   };
 
   return (
-    <AuthFrom textInfo={textInfo} onSubmit={handleSubmit}>
+    <AuthForm textInfo={textInfo} onSubmit={handleSubmit}>
       <label htmlFor="name">이름</label>
       <input
         type="text"
@@ -57,7 +57,7 @@ const Register = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <Button type="submit">회원가입</Button>
-    </AuthFrom>
+    </AuthForm>
   );
 };
 

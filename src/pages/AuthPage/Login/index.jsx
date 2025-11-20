@@ -1,7 +1,7 @@
 import styles from "./Login.module.css";
 import Button from "../../../components/Button/Button";
 import { Link } from "react-router-dom";
-import AuthFrom from "../components/AuthForm";
+import AuthForm from "../components/AuthForm";
 import { useState } from "react";
 import { login } from "../../../services/auth/authService";
 
@@ -29,7 +29,7 @@ const Login = () => {
   };
 
   return (
-    <AuthFrom textInfo={textInfo} onSubmit={handleSubmit}>
+    <AuthForm textInfo={textInfo} onSubmit={handleSubmit}>
       <label htmlFor="email">이메일</label>
       <input
         type="email"
@@ -49,7 +49,7 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <Button type="submit">로그인</Button>
-    </AuthFrom>
+    </AuthForm>
   );
 };
 

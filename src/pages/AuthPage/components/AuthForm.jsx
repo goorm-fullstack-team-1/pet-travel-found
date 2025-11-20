@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./AuthForm.module.css";
 
-const AuthFrom = ({ textInfo, children, onSubmit }) => {
+const AuthForm = ({ textInfo, children, onSubmit }) => {
   const { title, description, lastMessage } = textInfo;
 
   return (
@@ -21,4 +21,4 @@ const AuthFrom = ({ textInfo, children, onSubmit }) => {
   );
 };
 
-export default AuthFrom;
+export default AuthForm;
