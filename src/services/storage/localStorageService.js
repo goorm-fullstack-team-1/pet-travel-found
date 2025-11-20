@@ -9,6 +9,9 @@ export const localStorageService = {
    */
   getStorageItem: (key) => {
     const item = localStorage.getItem(key);
+
+    if (item === null) return null;
+
     try {
       return JSON.parse(item);
     } catch (e) {

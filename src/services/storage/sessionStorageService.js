@@ -9,6 +9,9 @@ export const sessionStorageService = {
    */
   getStorageItem: (key) => {
     const item = sessionStorage.getItem(key);
+
+    if (item === null) return null;
+
     try {
       return JSON.parse(item);
     } catch (e) {
