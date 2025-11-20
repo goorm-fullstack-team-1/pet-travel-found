@@ -12,7 +12,7 @@ export const isAuthenticated = () => {
 
 /**
  * 사용자를 로그인 상태로 설정합니다.
- * @param {object} user - 사용자 정보: {이름, 이메일, 암호화된 비밀번호}
+ * @param {object} user - 사용자 정보: {이름, 이메일, 비밀번호}
  */
 export const login = async (user) => {
   const store = localStorageService.getStorageItem("user") || [];
@@ -52,7 +52,7 @@ export const getUser = () => {
 /**
  * 회원가입 정보를 로컬 스토리지에 저장합니다.
  *
- * @param {object} user - 사용자 정보: {이름, 이메일, 암호화된 비밀번호}
+ * @param {object} user - 사용자 정보: {이름, 이메일, 비밀번호}
  */
 export const setUser = async (user) => {
   const hashed = await sha256Hash(user.password);
@@ -73,7 +73,7 @@ export const setUser = async (user) => {
  * 세션 스토리지에서 로그인된 회원 이메일을 가져옵니다.
  * @returns - 이메일 문자열 또는 null
  */
-export const getLogginedUserEmail = () => {
+export const getLoggedInUserEmail = () => {
   const user = sessionStorageService.getStorageItem("user");
   return user ? user.email : null;
 };
