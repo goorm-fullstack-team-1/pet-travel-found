@@ -1,6 +1,10 @@
 import styles from "./UserInfo.module.css";
 import userIcon from "../../../assets/images/icons/user_icon.svg";
 import Button from "../../../components/Button/Button";
+import {
+  getUserName,
+  getLoggedInUserEmail,
+} from "../../../services/auth/authService";
 
 const UserInfo = () => {
   return (
@@ -11,8 +15,8 @@ const UserInfo = () => {
         <h1>회원 정보</h1>
       </div>
       <div className={styles["user-info__block"]}>
-        <h2>사용자 이름</h2>
-        <p>user@example.com</p>
+        <h2>{getUserName()}</h2>
+        <p>{getLoggedInUserEmail()}</p>
       </div>
       <div className={styles["user-info__block"]}>
         <p>예약 내역</p>
