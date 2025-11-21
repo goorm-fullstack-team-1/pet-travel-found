@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import AuthPage from "./pages/AuthPage/index";
 import Login from "./pages/AuthPage/Login/index";
 import Register from "./pages/AuthPage/Register/index";
+import MyPage from "./pages/MyPage";
 
 function App() {
   console.log("PR 테스트");
@@ -17,6 +18,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
           </Route>
+          <Route path="my-page" element={<MyPage />} />
         </Routes>
       </BrowserRouter>
     </>
