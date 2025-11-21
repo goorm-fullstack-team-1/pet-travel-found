@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul > li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.auth_page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.auth_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 558px;
+    margin: 0 auto;
+    height: auto;
+    padding: 33px;
+    background-color: #FFFFFF;
+    border: solid 2px #E8E3D9;
+    border-radius: 20px;
+}

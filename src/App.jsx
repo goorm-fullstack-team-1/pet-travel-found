@@ -1,7 +1,9 @@
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import AuthPage from "./pages/AuthPage/index";
+import Login from "./pages/AuthPage/Login/index";
+import Register from "./pages/AuthPage/Register/index";
 
 function App() {
   console.log("PR 테스트");
@@ -9,7 +11,13 @@ function App() {
     <>
       <BrowserRouter>
         <Header></Header>
-        <Footer></Footer>
+        <Routes>
+          <Route path="auth" element={<AuthPage />}>
+            <Route index element={<Login />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+          </Route>
+        </Routes>
       </BrowserRouter>
     </>
   );

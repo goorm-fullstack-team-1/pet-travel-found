@@ -3,10 +3,10 @@ import styles from "./Header.module.css";
 import logo from "../../assets/images/logo.png";
 import AuthIcon from "../../assets/images/icons/auth_icon.svg";
 import Button from "../Button/Button";
-import { removeStorageItem } from "../../services/storage/localStorageService";
+import { isAuthenticated, logout } from "../../services/auth/authService";
 
 const Header = () => {
-  const isLoggedIn = localStorage.getItem("token") ? true : false;
+  const isLoggedIn = isAuthenticated();
 
   return (
     <header>
@@ -29,8 +29,12 @@ const Header = () => {
               <Button
                 className={styles.auth_button}
                 onClick={() => {
-                  removeStorageItem("token");
-                  window.location.href = isLoggedIn ? "/" : "/auth/login";
+                  if (isLoggedIn) {
+                    logout();
+                    window.location.href = "/";
+                  } else {
+                    window.location.href = "/auth/login";
+                  }
                 }}
               >
                 <img src={AuthIcon} alt="auth-icon" title="auth-icon" />
