@@ -1,5 +1,8 @@
 footer{
     background-color: #FFFFFF;
+    width : 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 .footer_inner {

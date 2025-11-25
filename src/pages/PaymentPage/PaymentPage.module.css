@@ -1,0 +1,94 @@
+.payment_page {
+    height: 100vh;
+    background-color: #F7F4ED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pageLeft, .pageRight {
+    width: 560px;
+    height: 560px;
+    background-color: #FFFFFF;
+    padding: 30px 50px;
+    border-radius: 15px;
+}
+
+.titleSection {
+    height: 100px;
+}
+
+.title {
+    color: #1E3931;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.description {
+    color: #2F5B4E;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.infoSection {
+    height: 300px;
+}
+
+.name {
+    color: #1E3931;
+    font-size: 22px;
+    font-weight: bold;
+}   
+
+.location {
+    color: #2F5B4E;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.checkInkOut {
+    color: #1E3931;
+    font-size: 16px;
+    font-weight: Bold;
+    margin-bottom: 10px;
+}
+
+.calendar {
+    width: 17px;
+    height: 19px;
+    padding-top: 5px;
+    margin-right: 5px;
+}
+
+.man {
+    color: #1E3931;
+    font-size: 16px;
+    font-weight: Bold;
+    padding: 0;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.person {
+}
+
+.period {
+    color: #1E3931;
+    font-size: 16px;
+    font-weight: Bold;
+    padding: 0px 5px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.totalPrice{
+    height: 100px;
+}

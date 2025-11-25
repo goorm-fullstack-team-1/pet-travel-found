@@ -1,9 +1,30 @@
 import logo from "../assets/images/logo.png";
+import thumbnail from "../assets/images/logo.png";
+import star from "../assets/images/icons/star.svg";
+import gps from "../assets/images/icons/gps.svg";
+import calendar from "../assets/images/icons/calendar.svg";
+import person from "../assets/images/icons/person.svg";
+import wishTrue from "../assets/images/icons/wishTrue.svg";
+import wishFalse from "../assets/images/icons/wishFalse.svg";
 
 export function getImage(imageId) {
   switch (imageId) {
     case "logo":
       return logo;
+    case "thumbnail":
+      return thumbnail;
+    case "star":
+      return star;
+    case "gps":
+      return gps;
+    case "calendar":
+      return calendar;
+    case "person":
+      return person;
+    case "wishTrue":
+      return wishTrue;
+    case "wishFalse":
+      return wishFalse;
     default:
       return null;
   }
