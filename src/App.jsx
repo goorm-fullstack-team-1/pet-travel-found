@@ -6,7 +6,6 @@ import Login from "./pages/AuthPage/Login/index";
 import Register from "./pages/AuthPage/Register/index";
 
 function App() {
-  console.log("PR 테스트");
   return (
     <>
       <BrowserRouter>
