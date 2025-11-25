@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import AuthPage from "./pages/AuthPage/index";
 import Login from "./pages/AuthPage/Login/index";
 import Register from "./pages/AuthPage/Register/index";
+import ListPage from "./pages/ListPage/index";
 import DetailPage from "./pages/DetailPage/index";
 import BookingPage from "./pages/BookingPage/index";
 import PaymentPage from "./pages/PaymentPage";
@@ -19,6 +20,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
           </Route>
+          <Route path="list" element={<ListPage />} />
           <Route path="detail" element={<DetailPage />} />
           <Route path="booking" element={<BookingPage />} />
           <Route path="payment" element={<PaymentPage />} />
