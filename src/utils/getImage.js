@@ -6,6 +6,8 @@ import calendar from "../assets/images/icons/calendar.svg";
 import person from "../assets/images/icons/person.svg";
 import wishTrue from "../assets/images/icons/wishTrue.svg";
 import wishFalse from "../assets/images/icons/wishFalse.svg";
+import card_white from "../assets/images/icons/card_white.svg";
+import card_black from "../assets/images/icons/card_black.svg";
 
 export function getImage(imageId) {
   switch (imageId) {
@@ -21,6 +23,10 @@ export function getImage(imageId) {
       return calendar;
     case "person":
       return person;
+    case "card_white":
+      return card_white;
+    case "card_black":
+      return card_black;
     case "wishTrue":
       return wishTrue;
     case "wishFalse":
