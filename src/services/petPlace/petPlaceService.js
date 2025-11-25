@@ -40,6 +40,12 @@ export const getPlaceList = ({
   const API_KEY = import.meta.env.VITE_PET_PLACE_API_KEY;
   const API_URL = import.meta.env.VITE_PET_PLACE_API_URL;
 
+  if (!API_KEY || !API_URL) {
+    throw new Error(
+      "환경 변수가 설정되지 않았습니다. VITE_PET_PLACE_API_KEY와 VITE_PET_PLACE_API_URL을 확인하세요.",
+    );
+  }
+
   const params = {
     serviceKey: API_KEY,
     pageNo,
