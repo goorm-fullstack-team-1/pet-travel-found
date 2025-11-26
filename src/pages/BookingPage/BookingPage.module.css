@@ -84,7 +84,7 @@
 
 .row {
     display: flex;
-    gap: 14px;
+    gap: 12px;
     margin-bottom: 14px;
 }
 
@@ -114,9 +114,9 @@
 
 .rowSingle {
     display: flex;
-    align-items: center;
+    
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
 }
 
 .guestControl {
@@ -124,17 +124,23 @@
     align-items: center;
     gap: 8px;
     border-radius: 12px;
-    padding: 6px 8px;
+    padding: 6px 16px;
     background: #f6f2ec;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    /* justify-content: center; */
 }
 
 .guestControl input[type="number"]{
-    width: 56px;
-    padding: 8px;
+    width: 45px;
+    padding-bottom: 2px;
     border: none;
     background: transparent;
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1E3931;
 }
 
 .guestBtn{
@@ -148,3 +154,18 @@
 }
 
 .guestBtn:hover{background: rgba(0,0,0,0.03);}
+
+.button{
+    width: 360px;
+    background-color: #1D3931;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3% 6%;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}

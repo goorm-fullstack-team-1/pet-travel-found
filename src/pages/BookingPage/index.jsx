@@ -1,14 +1,8 @@
 import styles from "./BookingPage.module.css";
 import Button from "../../components/Button/Button";
 import { getImage } from "../../utils/getImage";
-import { useState } from "react";
 
 const BookingPage = () => {
-  const [guests, setGuests] = useState(2);
-
-  const decGuests = () => setGuests((g) => Math.max(1, g - 1));
-  const incGuests = () => setGuests((g) => g + 1);
-
   return (
     <div className={styles.booking_page}>
       <div className={styles.pageLeft}>
@@ -47,38 +41,27 @@ const BookingPage = () => {
               <div className={styles.rowSingle}>
                 <label htmlFor="guests">인원</label>
                 <div className={styles.guestControl}>
-                  <button
-                    type="button"
-                    className={styles.guestBtn}
-                    aria-label="decrease"
-                    onClick={decGuests}
-                  >
-                    -
-                  </button>
+                  <img src={getImage("person")} alt="person" />
                   <input
                     id="guests"
                     name="guests"
                     type="number"
                     min="1"
-                    value={guests}
-                    onChange={(e) =>
-                      setGuests(Math.max(1, Number(e.target.value) || 1))
-                    }
+                    value={2}
                   />
-                  <button
-                    type="button"
-                    className={styles.guestBtn}
-                    aria-label="increase"
-                    onClick={incGuests}
-                  >
-                    +
-                  </button>
                 </div>
               </div>
             </form>
           </div>
 
-          <Button>결제하기</Button>
+          <Button className={styles.button}>
+            <img
+              className={styles.btnImg}
+              src={getImage("card_white")}
+              alt="카드"
+            />
+            결제하기
+          </Button>
         </div>
       </div>
 
