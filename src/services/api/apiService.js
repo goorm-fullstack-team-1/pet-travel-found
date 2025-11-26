@@ -40,5 +40,5 @@ export const Get = (api, params = {}, headers = {}) => {
       ...headers,
       Accept: "application/json",
     },
-  });
+  }).then((response) => response.json());
 };
