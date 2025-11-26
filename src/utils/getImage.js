@@ -6,7 +6,7 @@ import calendar from "../assets/images/icons/calendar.svg";
 import person from "../assets/images/icons/person.svg";
 import wishTrue from "../assets/images/icons/wishTrue.svg";
 import wishFalse from "../assets/images/icons/wishFalse.svg";
-
+import petWithCalendar from "../assets/images/petWithCalendar.png";
 export function getImage(imageId) {
   switch (imageId) {
     case "logo":
@@ -25,6 +25,8 @@ export function getImage(imageId) {
       return wishTrue;
     case "wishFalse":
       return wishFalse;
+    case "petWithCalendar":
+      return petWithCalendar;
     default:
       return null;
   }
