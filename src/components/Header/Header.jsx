@@ -20,7 +20,7 @@ const Header = () => {
               <Link to="/">메인페이지</Link>
             </li>
             <li>
-              <Link to="/list-page">숙소 리스트</Link>
+              <Link to="/list">숙소 리스트</Link>
             </li>
             <li>
               <Link to="/my-page">마이페이지</Link>
