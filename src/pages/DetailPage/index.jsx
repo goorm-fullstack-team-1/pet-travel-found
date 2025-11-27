@@ -24,6 +24,7 @@ const DetailPage = () => {
       <div className={styles.pageLeft}>
         <img
           className={styles.thumbnail}
+          // TODO: 추후 실제 선택한 숙소의 이미지 URL로 대체하도록 API 연동 및 상태 관리 적용 예정
           src={getImage(data.imgUrl)}
           alt="thumbnail"
         />
