@@ -1,6 +1,6 @@
 .placeitem {
     width: 348px;
-    height: 356px;
+    height: 420px;
     background-color: #FFFFFF;
     
     border-radius: 15px;
@@ -34,6 +34,7 @@
     font-size: 16px;
     font-weight: bold;
     color: #FF0000;
+    cursor: pointer;
 }
 
 .wishBtn {
@@ -43,6 +44,7 @@
 
 .info {
     margin-left: 8px;
+    padding: 0 5px;
 }
 
 .top {
@@ -73,12 +75,6 @@
     margin-right: 20px;
 }
 
-.gps {
-    margin-top: 2px;
-    height: 20px;
-    width: 20px;
-}
-
 .location {
     display: flex;
     align-items: center;
@@ -87,15 +83,41 @@
     color: #1D3931;
     margin-top: 8px;
 }
+.gps {
+    margin-top: 2px;
+    height: 20px;
+    width: 20px;
+}
+
+.gpsText {
+    font-size: 15px;
+}
 
 .shortIntro {
     font-size: 12px;
     font-weight: 400;
     color: #62847A;
     margin-top: 8px;
-    height: 40px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 305px;
+    height: 60px;
+    white-space: pre-line;
+    overflow-y: auto;
+}
+
+.shortIntro::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 10px;
+    background-color: #EEEFED;
+}
+
+.shortIntro::-webkit-scrollbar-thumb {
+    height: 2px;
+    border-radius: 10px;
+    background-color: #62847A;
+}
+
+.shortIntro::-webkit-scrollbar-button {
+    display: none;
 }
 
 .options {
@@ -105,8 +127,9 @@
 }
 
 .option {
-    font-size: 9px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
     color: #1D3931;
     background-color: #EEE1C1;
     border-radius: 12px;
@@ -132,7 +155,8 @@
 }
 
 .button {
-    background-color: #1D3931;
+    background-color: #2F5B4E;
+    border-radius: 10px;
     font-size: 13px;
     font-weight: bold;
     padding: 2% 6%;
