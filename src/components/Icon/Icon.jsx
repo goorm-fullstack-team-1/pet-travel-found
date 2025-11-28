@@ -1,7 +1,6 @@
 import { iconMap } from "../../utils/iconLoader";
 
 const Icon = ({ name, className, ...props }) => {
-  console.log(iconMap);
   const SvgIcon = iconMap[name];
 
   if (!SvgIcon) {
