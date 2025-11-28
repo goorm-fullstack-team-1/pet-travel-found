@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Noto Sans KR;
+}
+
+ul > li {
+    list-style: none;
+    
+    a {
+}
+    text-decoration: none;
+    color: inherit;
+}
+
+.detail_page {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 20px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 354px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.infoTop {
+    padding-top: 20px;
+}
+
+.nameSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nameSection > .name {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1D3931;
+}
+.nameSection > .keyCondition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    grid-gap: 8px;
+    width: 229px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #2F5B4E;
+    border-radius: 30px;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+.description {
+    padding-top: 25px;
+    font-size: 18px;
+    color: #62847A;
+}
+
+.subInfo {
+    display: flex;
+    justify-content: flex-start;
+    grid-gap: 12px;
+}
+
+.subInfo > div {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #62847A;
+    grid-gap: 3px;
+}
+
+.subInfo img {
+    width: 23px;
+    height: 23px;
+}
+
+.infoBot {
+    width: 100%;
+    margin-top: 35px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 25px 33px;
+}
+
+.infoBotTop {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1D3931;
+}
+
+.infoBot > .optionContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.infoBot > .optionContainer > .option {
+    margin-top: 28px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    grid-gap: 14px;
+}
+
+.infoBot > .optionContainer > .option > img {
+    width: 22px;
+    height: 22px;
+    box-sizing: unset;
+    padding: 7px;
+    border-radius: 50%;
+    background-color: #EAEEED;
+}
+
+.infoBot > .optionContainer > .option > span {
+    font-size: 18px;
+    color: #1D3931;
+}
+
+.reserve {
+    background-color: #FFFFFF;
+    border: solid 1px #E8E3D9;
+    padding: 26px 32px;
+    border-radius: 15px;
+}
+
+.reserveTop {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1D3931;
+}
+
+.reserveMid {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 37px;
+    color: #2F5B4E;
+}
+
+.reserveBot {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #62847A;
+    text-align: center;
+}
+
+.reserveHr {
+    margin-top: 33px;
+    border: solid .5px #E8E3D9;
+}
+
+.reserveBtnWrapper {
+    width: 100%;
+    text-align: center;
+    padding-top: 13px;
+}
+
+.reserveBtn {
+    width: 392px;
+    height: 45px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #2F5B4E;
+}
