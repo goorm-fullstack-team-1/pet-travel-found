@@ -1,5 +1,5 @@
 import logo from "../assets/images/logo.png";
-import thumbnail from "../assets/images/logo.png";
+import thumbnail from "../assets/images/thumbnail.png";
 import star from "../assets/images/icons/star.svg";
 import gps from "../assets/images/icons/gps.svg";
 import calendar from "../assets/images/icons/calendar.svg";
