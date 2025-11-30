@@ -99,7 +99,7 @@
     color: #62847A;
     margin-top: 8px;
     width: 305px;
-    height: 60px;
+    height: 65px;
     white-space: pre-line;
     overflow-y: auto;
 }
@@ -140,13 +140,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 12px;
 }
 
 .price {
     font-size: 18px;
     font-weight: bold;
     color: #1D3931;
-    margin-top: 12px;
 }
 
 .price span {

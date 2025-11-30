@@ -40,6 +40,8 @@ const PlaceItem = ({
     });
   };
 
+  const city = location.split(" ")[1];
+
   return (
     <div className={styles.placeitem}>
       <div className={styles.thumailContainer}>
@@ -84,20 +86,20 @@ const PlaceItem = ({
         </div>
         <div className={styles.location}>
           <img className={styles.gps} src={getImage("gps")} alt="gps" />
-          <div className={styles.gpsText}>{location.split(" ")[1]}</div>
+          <div className={styles.gpsText}>{city}</div>
         </div>
         <div className={styles.shortIntro}>
           {"- " + shortIntro.replaceAll(" | ", "\n- ")}
-          {/* {shortIntro.map((option, idx) => (
-            <div key={idx}>{option}</div>
-          ))} */}
         </div>
         <div className={styles.options}>
-          {options.map((option, idx) => (
-            <div className={styles.option} key={idx}>
-              {option}
-            </div>
-          ))}
+          {options.map(
+            (option, idx) =>
+              option && (
+                <div className={styles.option} key={idx}>
+                  {option}
+                </div>
+              ),
+          )}
         </div>
         <div className={styles.bottom}>
           <div className={styles.price}>
