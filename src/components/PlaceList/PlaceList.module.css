@@ -1,9 +1,6 @@
 .placeList {
-    width: 1200px;
-    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px 40px;
-    gap: 20px;
+    padding: 20px 55px;
+    gap: 23px;
 }
