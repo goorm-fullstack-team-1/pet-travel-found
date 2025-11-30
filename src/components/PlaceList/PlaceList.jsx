@@ -13,11 +13,10 @@ const PlaceList = () => {
         const request = await getPlaceList({ category: "펜션" });
         const data = request?.response?.body?.items?.item;
 
-        console.log(data);
-
         setPlaceLists(data);
       } catch (error) {
         console.error("숙소 정보 불러오기를 실패했습니다.", error);
+        setPlaceLists([]);
       }
     };
 
