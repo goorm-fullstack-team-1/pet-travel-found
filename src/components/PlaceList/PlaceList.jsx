@@ -9,10 +9,16 @@ const PlaceList = () => {
 
   useEffect(() => {
     const fetchPlaceData = async () => {
-      const request = await getPlaceList({ category: "펜션" });
-      const data = request?.response?.body?.items?.item;
+      try {
+        const request = await getPlaceList({ category: "펜션" });
+        const data = request?.response?.body?.items?.item;
 
-      setPlaceLists(data);
+        console.log(data);
+
+        setPlaceLists(data);
+      } catch (error) {
+        console.error("숙소 정보 불러오기를 실패했습니다.", error);
+      }
     };
 
     fetchPlaceData();
@@ -28,7 +34,7 @@ const PlaceList = () => {
           score={4.8}
           location={place.address}
           shortIntro={place.description}
-          options={[place.category1, place.category2]}
+          options={[place.category1, place.category2, place.category3]}
           price={"120,000"}
         ></PlaceItem>
       ))}
