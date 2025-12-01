@@ -8,6 +8,7 @@ import ListPage from "./pages/ListPage/index";
 import DetailPage from "./pages/DetailPage/index";
 import BookingPage from "./pages/BookingPage/index";
 import PaymentPage from "./pages/PaymentPage";
+import MyPage from "./pages/MyPage";
 import Footer from "./components/Footer/Footer";
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="detail" element={<DetailPage />} />
           <Route path="booking" element={<BookingPage />} />
           <Route path="payment" element={<PaymentPage />} />
+          <Route path="my" element={<MyPage />} />
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
