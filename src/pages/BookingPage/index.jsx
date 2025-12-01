@@ -1,8 +1,67 @@
 import styles from "./BookingPage.module.css";
 import Button from "../../components/Button/Button";
 import { getImage } from "../../utils/getImage";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-const BookingPage = () => {
+const BookingPage = ({ name, address }) => {
+  name = name || "부산 해운대 펫호텔";
+  address = address || "부산";
+  const [checkIn, setCheckIn] = useState("");
+  const [checkOut, setCheckOut] = useState("");
+  const [headCount, setHeadCount] = useState(2);
+
+  const verifyCheckIn = (e) => {
+    setCheckIn(e.target.value);
+    const checkInDate = new Date(e.target.value);
+    const today = new Date();
+    if (checkInDate < today) {
+      alert("체크인 날짜는 오늘 이후로 선택해야 합니다.");
+      e.target.value = "";
+    }
+  };
+
+  const verifyCheckOut = (e) => {
+    setCheckOut(e.target.value);
+    const checkOutDate = new Date(e.target.value);
+    const checkInInput = document.getElementById("checkin");
+    const checkInDate = new Date(checkInInput.value);
+    if (checkOutDate <= checkInDate) {
+      alert("체크아웃 날짜는 체크인 날짜 이후로 선택해야 합니다.");
+      e.target.value = "";
+    }
+  };
+
+  const verifyHeadCount = (e) => {
+    const value = parseInt(e.target.value, 10);
+    if (value < 1) {
+      alert("인원은 최소 1명 이상이어야 합니다.");
+      e.target.value = 1;
+      setHeadCount(1);
+    } else if (value > 10) {
+      alert("인원은 최대 10명 이하이어야 합니다.");
+      e.target.value = 10;
+      setHeadCount(10);
+    } else {
+      setHeadCount(value);
+    }
+  };
+
+  const navigate = useNavigate();
+
+  const goPayment = () => {
+    navigate("/payment", {
+      state: {
+        name,
+        address,
+        checkIn,
+        checkOut,
+        headCount,
+        price: "120000", // 예시 가격, 실제로는 선택한 숙소의 가격을 전달해야 함
+      },
+    });
+  };
+
   return (
     <div className={styles.booking_page}>
       <div className={styles.pageLeft}>
@@ -18,8 +77,8 @@ const BookingPage = () => {
 
           <div className={styles.infoSection}>
             <div className={styles.placeName}>
-              <div className={styles.name}>부산 해운대 펫 호텔</div>
-              <div className={styles.location}>부산</div>
+              <div className={styles.name}>{name}</div>
+              <div className={styles.location}>{address}</div>
             </div>
 
             <form
@@ -29,12 +88,22 @@ const BookingPage = () => {
               <div className={styles.row}>
                 <div className={styles.field}>
                   <label htmlFor="checkin">체크인</label>
-                  <input id="checkin" name="checkin" type="date" />
+                  <input
+                    id="checkin"
+                    name="checkin"
+                    type="date"
+                    onChange={verifyCheckIn}
+                  />
                 </div>
 
                 <div className={styles.field}>
                   <label htmlFor="checkout">체크아웃</label>
-                  <input id="checkout" name="checkout" type="date" />
+                  <input
+                    id="checkout"
+                    name="checkout"
+                    type="date"
+                    onChange={verifyCheckOut}
+                  />
                 </div>
               </div>
 
@@ -47,14 +116,15 @@ const BookingPage = () => {
                     name="guests"
                     type="number"
                     min="1"
-                    value={2}
+                    value={headCount}
+                    onChange={verifyHeadCount}
                   />
                 </div>
               </div>
             </form>
           </div>
 
-          <Button className={styles.button}>
+          <Button className={styles.button} onClick={goPayment}>
             <img
               className={styles.btnImg}
               src={getImage("card_white")}
