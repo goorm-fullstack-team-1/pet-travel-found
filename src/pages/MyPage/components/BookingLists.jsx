@@ -3,12 +3,14 @@ import styles from "./BookingLists.module.css";
 
 const BookingLists = () => {
   // 테스트 데이터
-  const date = new Date();
-  const bookingDateStart = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
-  const bookingDateEnd = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate() + 1}`;
+  const today = new Date();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+
+  const bookingDateStart = today.toISOString().slice(0, 10);
+  const bookingDateEnd = tomorrow.toISOString().slice(0, 10);
   const nightCount =
-    (new Date(bookingDateEnd) - new Date(bookingDateStart)) /
-    (1000 * 60 * 60 * 24);
+    (tomorrow.getTime() - today.getTime()) / (1000 * 60 * 60 * 24);
 
   return (
     <div className={styles["booking-lists"]}>
