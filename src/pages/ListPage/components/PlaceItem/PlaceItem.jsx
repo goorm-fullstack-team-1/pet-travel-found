@@ -1,6 +1,6 @@
 import styles from "./PlaceItem.module.css";
-import { getImage } from "../../utils/getImage";
-import Button from "../Button/Button";
+import { getImage } from "../../../../utils/getImage";
+import Button from "../../../../components/Button/Button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 /*

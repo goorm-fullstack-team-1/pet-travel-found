@@ -1,8 +1,8 @@
-import thumbnail from "../../assets/images/placeDefault.png";
+import thumbnail from "../../../../assets/images/thumbnail.png";
 import styles from "./PlaceList.module.css";
 import PlaceItem from "../PlaceItem/PlaceItem";
 import { useState, useEffect } from "react";
-import { getPlaceList } from "../../services/petPlace/petPlaceService";
+import { getPlaceList } from "../../../../services/petPlace/petPlaceService";
 
 const PlaceList = () => {
   const [placeLists, setPlaceLists] = useState([]);
