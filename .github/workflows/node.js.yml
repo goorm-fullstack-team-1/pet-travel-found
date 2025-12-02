@@ -17,18 +17,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # PNPM 설치
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          
       # Node.js + PNPM 캐싱 설정
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-
-      # PNPM 설치
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       # 의존성 설치
       - name: Install dependencies
