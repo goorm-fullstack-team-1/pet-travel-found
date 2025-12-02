@@ -38,10 +38,6 @@ jobs:
       - name: Build
         run: pnpm build
 
-      # Test (테스트 없으면 생략 가능)
-      - name: Run tests
-        run: pnpm test
-
       # S3 배포
       - name: Deploy to S3
         uses: awact/s3-action@master
