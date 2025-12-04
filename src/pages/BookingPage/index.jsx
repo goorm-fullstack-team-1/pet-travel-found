@@ -3,6 +3,8 @@ import Button from "../../components/Button/Button";
 import { getImage } from "../../utils/getImage";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
+import { isAuthenticated } from "../../services/auth/authService";
 
 const BookingPage = ({ name, address }) => {
   name = name || "부산 해운대 펫호텔";
@@ -61,6 +63,13 @@ const BookingPage = ({ name, address }) => {
       },
     });
   };
+
+  useEffect(() => {
+    if (!isAuthenticated()) {
+      alert("로그인이 필요합니다.");
+      navigate("/auth/login");
+    }
+  }, [navigate]);
 
   return (
     <div className={styles.booking_page}>
