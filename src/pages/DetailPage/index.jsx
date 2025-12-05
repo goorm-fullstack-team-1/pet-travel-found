@@ -10,7 +10,7 @@ const DetailPage = () => {
     thumbnail: "",
     name: "",
     score: 0,
-    location: "",
+    address: "",
     shortIntro: "",
     options: [],
     price: "",
@@ -50,7 +50,7 @@ const DetailPage = () => {
           <div className={styles.subInfo}>
             <div className={styles.location}>
               <img src={getImage("gps")} alt="gps" />
-              {safeState.location}
+              {safeState.address}
             </div>
             <div className={styles.score}>
               <img src={getImage("star")} alt="star" />

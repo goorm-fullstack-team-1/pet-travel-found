@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
   이미지 = thumail
   플레이스 이름 = name
   별점 = score
-  위치 = location
+  위치 = address
   간단 설명 = shortIntro
   옵션 (배열) = option
   가격 = price
@@ -18,7 +18,7 @@ const PlaceItem = ({
   thumbnail,
   name,
   score,
-  location,
+  address,
   shortIntro,
   options,
   price,
@@ -32,7 +32,7 @@ const PlaceItem = ({
         thumbnail,
         name,
         score,
-        location,
+        address,
         shortIntro,
         options,
         price,
@@ -40,7 +40,7 @@ const PlaceItem = ({
     });
   };
 
-  const city = location.split(" ")[1];
+  const city = address.split(" ")[1];
 
   return (
     <div className={styles.placeitem}>

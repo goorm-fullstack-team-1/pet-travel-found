@@ -31,7 +31,7 @@ const PlaceList = () => {
           thumbnail={thumbnail}
           name={place.title}
           score={4.8}
-          location={place.address}
+          address={place.address}
           shortIntro={place.description}
           options={[place.category1, place.category2, place.category3]}
           price={"120,000"}
