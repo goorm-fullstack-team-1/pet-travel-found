@@ -1,10 +1,20 @@
 import styles from "./PaymentPage.module.css";
 import Button from "../../components/Button/Button";
 import { getImage } from "../../utils/getImage";
-import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { isAuthenticated } from "../../services/auth/authService";
+import { setPayment } from "../../services/payment/payService";
 
 const PaymentPage = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!isAuthenticated()) {
+      alert("로그인이 필요합니다.");
+      navigate("/auth/login");
+    }
+  }, [navigate]);
+
   // 1. useLocation 훅을 사용해 location 객체 가져오기
   const location = useLocation();
 
@@ -19,6 +29,8 @@ const PaymentPage = () => {
   const stayDuration = Math.round(timeDiff / MS_PER_DAY);
   const totalPrice = Number(price * stayDuration).toLocaleString();
   const dayPrice = Number(price).toLocaleString();
+
+  const [cardOwner, setCardOwner] = useState("");
 
   const [cardNumber, setCardNumber] = useState("");
 
@@ -66,6 +78,50 @@ const PaymentPage = () => {
     setExpiryDate(formattedValue);
   };
 
+  const [CVV, setCVV] = useState("");
+
+  const formatCVV = (value) => {
+    // 1. 숫자 외의 모든 문자 제거
+    const cleanedValue = value.replace(/\D/g, "");
+
+    // 2. 최대 4자리까지만 사용
+    const truncatedValue = cleanedValue.substring(0, 3);
+
+    return truncatedValue;
+  };
+
+  const handleCVVChange = (e) => {
+    const formattedValue = formatCVV(e.target.value);
+    setCVV(formattedValue);
+  };
+
+  const handleCardOwner = (e) => {
+    setCardOwner(e.target.value);
+  };
+
+  const handlePayment = () => {
+    setPayment({
+      name,
+      address,
+      checkIn,
+      checkOut,
+      headCount,
+      stayDuration,
+      totalPrice,
+      cardNumber,
+      expiryDate,
+      CVV,
+      cardOwner,
+    })
+      .then(() => {
+        alert("결제 성공! 숙소리스트 화면으로 이동합니다.");
+      })
+      .catch((error) => {
+        alert(`결제 실패: ${error.message}`);
+      });
+
+    navigate("/my");
+  };
   return (
     <div className={styles.payment_page}>
       <div className={styles.pageLeft}>
@@ -104,7 +160,7 @@ const PaymentPage = () => {
             </div>
             <div className={styles.period}>
               <div>숙박일수</div>
-              <div>1박</div>
+              <div>{stayDuration}박</div>
             </div>
             <div className={styles.price}>
               <div>1박 요금</div>
@@ -123,7 +179,7 @@ const PaymentPage = () => {
         <div className={styles.right_inner}>
           <div className={styles.paymentDetailTitle}>
             <img
-              claseName={styles.card}
+              className={styles.card}
               src={getImage("card_black")}
               alt="카드"
             />
@@ -162,18 +218,31 @@ const PaymentPage = () => {
               {/* CVV */}
               <div className={`${styles.formGroup} ${styles.halfWidth}`}>
                 <label htmlFor="cvv">CVV</label>
-                <input id="cvv" type="text" placeholder="123" maxLength="3" />
+                <input
+                  id="cvv"
+                  type="text"
+                  placeholder="123"
+                  value={CVV}
+                  onChange={handleCVVChange}
+                  maxLength="3"
+                />
               </div>
             </div>
 
             {/* 카드 소유자 명 입력 필드 */}
             <div className={styles.formGroup}>
               <label htmlFor="cardHolderName">카드 소유자 명</label>
-              <input id="cardHolderName" type="text" placeholder="홍길동" />
+              <input
+                id="cardHolderName"
+                type="text"
+                placeholder="홍길동"
+                value={cardOwner}
+                onChange={handleCardOwner}
+              />
             </div>
           </div>
 
-          <Button className={styles.button}>
+          <Button className={styles.button} onClick={handlePayment}>
             <img
               className={styles.btnImg}
               src={getImage("card_white")}
