@@ -1,4 +1,5 @@
 import logo from "../assets/images/logo.png";
+import searchLogo from "../assets/images/searchLogo.png";
 import thumbnail from "../assets/images/thumbnail.png";
 import star from "../assets/images/icons/star.svg";
 import gps from "../assets/images/icons/gps.svg";
@@ -34,6 +35,8 @@ export function getImage(imageId) {
       return wishFalse;
     case "petWithCalendar":
       return petWithCalendar;
+    case "searchLogo":
+      return searchLogo;
     default:
       return null;
   }
