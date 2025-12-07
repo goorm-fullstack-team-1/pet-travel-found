@@ -18,7 +18,7 @@ const PlaceItem = ({
   thumbnail,
   name,
   score,
-  location,
+  address,
   shortIntro,
   options,
   price,
@@ -32,7 +32,7 @@ const PlaceItem = ({
         thumbnail,
         name,
         score,
-        location,
+        address,
         shortIntro,
         options,
         price,
@@ -40,7 +40,7 @@ const PlaceItem = ({
     });
   };
 
-  const city = location.split(" ")[1];
+  const city = address.split(" ")[1];
 
   return (
     <div className={styles.placeitem}>
