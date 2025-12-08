@@ -101,6 +101,7 @@ const PaymentPage = () => {
 
   const handlePayment = () => {
     setPayment({
+      bookingDay: new Date().toISOString().split("T")[0],
       name,
       address,
       checkIn,
@@ -114,7 +115,7 @@ const PaymentPage = () => {
       cardOwner,
     })
       .then(() => {
-        alert("결제 성공! 숙소리스트 화면으로 이동합니다.");
+        alert("결제 성공! 마이페이지 화면으로 이동합니다.");
       })
       .catch((error) => {
         alert(`결제 실패: ${error.message}`);
