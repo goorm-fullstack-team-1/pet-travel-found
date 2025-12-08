@@ -6,10 +6,12 @@ import {
   getLoggedInUserEmail,
   logout,
 } from "../../../services/auth/authService";
+import { localStorageService } from "../../../services/storage/localStorageService";
 
 const UserInfo = () => {
   const userName = getUserName();
   const userEmail = getLoggedInUserEmail();
+  const payments = localStorageService.getStorageItem("payment") || [];
 
   const logoutHandler = () => {
     logout();
@@ -29,7 +31,7 @@ const UserInfo = () => {
       <div className={styles["user-info__block"]}>
         <p>예약 내역</p>
         {/* TODO: 추후 데이터 연동 필요 */}
-        <h2>5</h2>
+        <h2>{payments.length}</h2>
       </div>
       <Button className={styles["user-info__button"]} onClick={logoutHandler}>
         로그아웃
