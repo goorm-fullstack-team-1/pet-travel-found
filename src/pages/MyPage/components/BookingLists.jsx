@@ -1,30 +1,34 @@
+import { localStorageService } from "../../../services/storage/localStorageService";
 import BookingList from "./BookingList";
 import styles from "./BookingLists.module.css";
 
 const BookingLists = () => {
-  // 테스트 데이터
-  const today = new Date();
-  const tomorrow = new Date(today);
-  tomorrow.setDate(tomorrow.getDate() + 1);
-
-  const bookingDateStart = today.toISOString().slice(0, 10);
-  const bookingDateEnd = tomorrow.toISOString().slice(0, 10);
-  const nightCount =
-    (tomorrow.getTime() - today.getTime()) / (1000 * 60 * 60 * 24);
+  const user = localStorageService.getStorageItem("user");
+  const payments = localStorageService.getStorageItem("payment") || [];
+  const bookingLists = payments.filter(
+    (payment) => payment.email === user.email,
+  );
 
   return (
     <div className={styles["booking-lists"]}>
-      {/* 추후 데이터 연동 필요 */}
-      <BookingList
-        placeTitle={"남이섬글램핑"}
-        status={"결제완료"}
-        checkIn={bookingDateStart}
-        checkOut={bookingDateEnd}
-        nightCount={nightCount}
-        headCount={"2명"}
-        bookingDate={bookingDateStart}
-        price={"110,000원"}
-      ></BookingList>
+      {bookingLists.length >= 1 ? (
+        bookingLists.map((bookingList, idx) => (
+          <BookingList
+            key={idx}
+            placeTitle={bookingList.name}
+            status={"결제완료"}
+            checkIn={bookingList.checkIn}
+            checkOut={bookingList.checkOut}
+            nightCount={bookingList.stayDuration}
+            headCount={bookingList.headCount}
+            // bookingDate={bookingList.bookingDate}
+            bookingDate={"2025-12-08"}
+            price={bookingList.totalPrice + "원"}
+          ></BookingList>
+        ))
+      ) : (
+        <div className={styles["no-booking"]}>예약 내역이 없습니다.</div>
+      )}
     </div>
   );
 };
