@@ -5,7 +5,7 @@ import { sha256Hash } from "../../utils/hashUtils";
 /**
  * 결제 정보를 로컬 스토리지에 저장합니다.
  *
- * @param {object} info - 결제 정보: {숙소명, 주소, 체크인날짜, 체크아웃날짜, 인원수, 숙박일수, 결제금액, 카드번호, 유효기간, CVV, 카드소유자명}
+ * @param {object} info - 결제 정보: {예약일, 숙소명, 주소, 체크인날짜, 체크아웃날짜, 인원수, 숙박일수, 결제금액, 카드번호, 유효기간, CVV, 카드소유자명}
  */
 export const setPayment = async (info) => {
   const hashedCardNumber = await sha256Hash(info.cardNumber);
