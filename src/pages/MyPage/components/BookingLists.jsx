@@ -21,8 +21,7 @@ const BookingLists = () => {
             checkOut={bookingList.checkOut}
             nightCount={bookingList.stayDuration}
             headCount={bookingList.headCount}
-            // bookingDate={bookingList.bookingDate}
-            bookingDate={"2025-12-08"}
+            bookingDate={bookingList.bookingDay}
             price={bookingList.totalPrice + "원"}
           ></BookingList>
         ))
