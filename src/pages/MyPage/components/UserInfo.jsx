@@ -12,6 +12,9 @@ const UserInfo = () => {
   const userName = getUserName();
   const userEmail = getLoggedInUserEmail();
   const payments = localStorageService.getStorageItem("payment") || [];
+  const bookingLists = payments.filter(
+    (payment) => payment.userEmail === userEmail,
+  );
 
   const logoutHandler = () => {
     logout();
@@ -30,7 +33,7 @@ const UserInfo = () => {
       </div>
       <div className={styles["user-info__block"]}>
         <p>예약 내역</p>
-        <h2>{payments.length}</h2>
+        <h2>{bookingLists.length}</h2>
       </div>
       <Button className={styles["user-info__button"]} onClick={logoutHandler}>
         로그아웃
