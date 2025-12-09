@@ -17,8 +17,17 @@ const MainPage = () => {
             잊지 못할 추억을 만들어보세요.
           </div>
           <div className={styles.btns}>
-            <Button className={styles.startButton}>지금 시작하기 →</Button>
-            <Button className={styles.learnMoreButton}>더 알아보기</Button>
+            <Button
+              onClick={() => {
+                location.href = "/list";
+              }}
+              className={styles.startButton}
+            >
+              지금 시작하기 →
+            </Button>
+            <Button className={styles.learnMoreButton}>
+              <a href="#info">더 알아보기</a>
+            </Button>
           </div>
         </div>
         <div className={styles.intro_image}>
@@ -30,7 +39,7 @@ const MainPage = () => {
         </div>
       </div>
       <hr className={styles.divider} />
-      <div className={styles.info}>
+      <div className={styles.info} id="info">
         <div className={styles.info_image}>
           <img className={styles.logo} src={getImage("infoImage")} alt="logo" />
         </div>
