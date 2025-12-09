@@ -10,6 +10,8 @@ import wishFalse from "../assets/images/icons/wishFalse.svg";
 import petWithCalendar from "../assets/images/petWithCalendar.png";
 import card_white from "../assets/images/icons/card_white.svg";
 import card_black from "../assets/images/icons/card_black.svg";
+import infoImage from "../assets/images/infoImage.png";
+import introImage from "../assets/images/introImage.png";
 
 export function getImage(imageId) {
   switch (imageId) {
@@ -37,6 +39,10 @@ export function getImage(imageId) {
       return petWithCalendar;
     case "searchLogo":
       return searchLogo;
+    case "infoImage":
+      return infoImage;
+    case "introImage":
+      return introImage;
     default:
       return null;
   }
