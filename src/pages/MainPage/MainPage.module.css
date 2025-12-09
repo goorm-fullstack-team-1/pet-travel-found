@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Noto Sans KR;
+}
+
+ul > li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ 
+.mainpage {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.intro {
+    margin-top: 155px;
+    padding: 75px 125px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro_text > .title {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 55px;
+    color: #1D3931;
+}
+
+.intro_text > .title > span {
+    font-size: 55px;
+    color: #2F5B4E;
+}
+
+.intro_text > .desc {
+    padding-top: 20px;
+    font-size: 20px;
+    color: #1D3931;
+    font-weight: 300;
+}
+
+.intro_text > .btns {
+    padding-top: 47px;
+    display: flex;
+    gap: 20px;
+}
+
+.intro_text > .btns > button {
+    width: 122px;
+    height: 30px;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 8px;
+    border: solid 1px #E8E3D9;
+    font-weight: 500;
+}
+
+.startButton {
+    background-color: #2F5B4E;
+    color: #FFFFFF;
+}
+
+.learnMoreButton {
+    background-color: #F5F2EB;
+}
+
+.intro_image img{
+    width:278px; 
+    height: 278px;
+}
+
+.divider {
+    width: 1061px;
+    margin: 76px auto;
+    border: solid .5px #BCBCBC;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.info > .info_image > img {
+     width: 213px;
+     height: 213px;
+}
+
+.info > .info_title {
+    font-size: 35px;
+    font-weight: 700;
+    color: #1D3931;
+}
+
+.info > .info_desc {
+    font-size: 20px;
+    font-weight: 300;
+    color: #1D3931;
+    text-align: center;
+}
+
+.feat {
+    padding-top: 87px;
+    display: flex;
+    gap: 53px;
+}
+
+.feat > .feat_card {
+    padding: 33px 13px 18px 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    border: solid 1px #E8E3D9;
+    grid-gap: 22px;
+}
+
+.feat > .feat_card > .feat_image {
+    width: 69px;
+    height: 69px;
+    border-radius: 50%;
+    background-color: #EAEEED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feat_title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1D3931;
+}
+
+.feat_desc {
+    font-size: 15px;
+    font-weight: 500;
+    color: #62847A;
+}
