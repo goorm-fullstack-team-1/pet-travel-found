@@ -9,13 +9,16 @@ import DetailPage from "./pages/DetailPage/index";
 import BookingPage from "./pages/BookingPage/index";
 import PaymentPage from "./pages/PaymentPage";
 import MyPage from "./pages/MyPage";
+import MainPage from "./pages/MainPage";
 import Footer from "./components/Footer/Footer";
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <Header></Header>
         <Routes>
+          <Route path="/" element={<MainPage />} />
           <Route path="auth" element={<AuthPage />}>
             <Route index element={<Login />} />
             <Route path="login" element={<Login />} />
