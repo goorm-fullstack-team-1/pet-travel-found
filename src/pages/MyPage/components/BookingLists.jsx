@@ -1,12 +1,13 @@
-import { localStorageService } from "../../../services/storage/localStorageService";
 import BookingList from "./BookingList";
 import styles from "./BookingLists.module.css";
+import { localStorageService } from "../../../services/storage/localStorageService";
+import { getLoggedInUserEmail } from "../../../services/auth/authService";
 
 const BookingLists = () => {
-  const user = localStorageService.getStorageItem("user");
+  const userEmail = getLoggedInUserEmail();
   const payments = localStorageService.getStorageItem("payment") || [];
   const bookingLists = payments.filter(
-    (payment) => payment.email === user.email,
+    (payment) => payment.userEmail === userEmail,
   );
 
   return (
