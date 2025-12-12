@@ -16,21 +16,25 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header></Header>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="auth" element={<AuthPage />}>
-            <Route index element={<Login />} />
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-          </Route>
-          <Route path="list" element={<ListPage />} />
-          <Route path="detail" element={<DetailPage />} />
-          <Route path="booking" element={<BookingPage />} />
-          <Route path="payment" element={<PaymentPage />} />
-          <Route path="my" element={<MyPage />} />
-        </Routes>
-        <Footer></Footer>
+        <div className="app-layout">
+          <Header></Header>
+          <main>
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="auth" element={<AuthPage />}>
+                <Route index element={<Login />} />
+                <Route path="login" element={<Login />} />
+                <Route path="register" element={<Register />} />
+              </Route>
+              <Route path="list" element={<ListPage />} />
+              <Route path="detail" element={<DetailPage />} />
+              <Route path="booking" element={<BookingPage />} />
+              <Route path="payment" element={<PaymentPage />} />
+              <Route path="my" element={<MyPage />} />
+            </Routes>
+          </main>
+          <Footer></Footer>
+        </div>
       </BrowserRouter>
     </>
   );

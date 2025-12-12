@@ -13,11 +13,6 @@ a {
     text-decoration: none;
     color: inherit;
 }
- 
-.mainpage {
-    width: 1200px;
-    margin: 0 auto;
-}
 
 .intro {
     margin-top: 155px;
@@ -114,7 +109,7 @@ a {
 }
 
 .feat {
-    padding-top: 87px;
+    padding: 87px 0;
     display: flex;
     gap: 53px;
 }

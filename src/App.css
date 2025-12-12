@@ -1,0 +1,14 @@
+main {
+    width: 1200px;
+    margin: 0 auto;
+    /* flex-basis: auto; flex-grow: 1; flex-shrink: 1;을 의미함 */
+    /* 0 보다 큰 값이 설정되면 여백의 빈 공간을 채움 */
+    flex: 1; 
+}
+
+.app-layout {
+    /* 화면 전체 높이를 차지하게 하고, main의 여백을 채워서 footer가 항상 아래에 위치하도록 함 */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

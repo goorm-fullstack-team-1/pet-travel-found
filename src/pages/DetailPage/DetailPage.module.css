@@ -16,8 +16,6 @@ a {
 }
 
 .detail_page {
-    width: 1200px;
-    margin: 0 auto;
     padding: 60px 0;
     display: grid;
     grid-template-columns: 60% 40%;
