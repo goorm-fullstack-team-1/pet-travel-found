@@ -32,7 +32,7 @@ jobs:
 
       # 의존성 설치
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       # Build (Vite → dist 폴더 생성됨)
       - name: Build
