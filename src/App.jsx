@@ -11,6 +11,7 @@ import PaymentPage from "./pages/PaymentPage";
 import MyPage from "./pages/MyPage";
 import MainPage from "./pages/MainPage";
 import Footer from "./components/Footer/Footer";
+import RedirectIfAuth from "./components/Guards/RedirectIfAuth";
 
 function App() {
   return (
@@ -21,7 +22,14 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<MainPage />} />
-              <Route path="auth" element={<AuthPage />}>
+              <Route
+                path="auth"
+                element={
+                  <RedirectIfAuth>
+                    <AuthPage />
+                  </RedirectIfAuth>
+                }
+              >
                 <Route index element={<Login />} />
                 <Route path="login" element={<Login />} />
                 <Route path="register" element={<Register />} />
