@@ -1,0 +1,188 @@
+.payment_page {
+    height: 100vh;
+    background-color: #F7F4ED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pageLeft, .pageRight {
+    width: 560px;
+    height: 560px;
+    background-color: #FFFFFF;
+    padding: 30px 50px;
+    border-radius: 15px;
+}
+
+.titleSection {
+    height: 100px;
+}
+
+.title {
+    color: #1E3931;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.description {
+    color: #2F5B4E;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.infoSection {
+    height: 300px;
+}
+
+.name {
+    color: #1E3931;
+    font-size: 22px;
+    font-weight: bold;
+}   
+
+.location {
+    color: #2F5B4E;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.checkInkOut {
+    color: #1E3931;
+    font-size: 16px;
+    font-weight: Bold;
+    margin-bottom: 7px;
+}
+
+.calendar {
+    width: 17px;
+    height: 19px;
+    padding-top: 5px;
+    margin-right: 5px;
+}
+
+.man {
+    color: #1E3931;
+    font-size: 16px;
+    font-weight: Bold;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #D9D9D9;
+    display: flex;
+}
+
+.person {
+    width: 17px;
+    height: 20px;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.period {
+    color: #1E3931;
+    font-size: 16px;
+    font-weight: Bold;
+    padding: 0px 5px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    color: #1E3931;
+    font-size: 16px;
+    font-weight: Bold;
+    padding: 0px 5px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.totalPrice{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: #1E3931;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.paymentDetailTitle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 5px;
+}
+
+
+
+.cardFormContainer {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formGroup label {
+    display: block;
+    color: #1E3931;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.formGroup input[type="text"] {
+    flex-grow: 1; /* 남은 공간을 입력 필드가 모두 차지하도록 설정 */
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #D9E8DB;
+    color: #2F5B4E;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  /* width: 100% 대신 flex-grow: 1을 사용합니다. */
+}
+
+.formRow {
+    display: flex; /* Flexbox 활성화 */
+    gap: 40px; /* 두 항목 사이의 간격 */
+}
+
+.halfWidth {
+    width: 45.65%;
+}
+
+.button{
+    width: 100%;
+    background-color: #1D3931;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3% 6%;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.btnImg{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.center{
+    margin-top: 20px;
+    text-align: center;
+}

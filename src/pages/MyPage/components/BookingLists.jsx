@@ -1,0 +1,36 @@
+import BookingList from "./BookingList";
+import styles from "./BookingLists.module.css";
+import { localStorageService } from "../../../services/storage/localStorageService";
+import { getLoggedInUserEmail } from "../../../services/auth/authService";
+
+const BookingLists = () => {
+  const userEmail = getLoggedInUserEmail();
+  const payments = localStorageService.getStorageItem("payment") || [];
+  const bookingLists = payments.filter(
+    (payment) => payment.userEmail === userEmail,
+  );
+
+  return (
+    <div className={styles["booking-lists"]}>
+      {bookingLists.length >= 1 ? (
+        bookingLists.map((bookingList, idx) => (
+          <BookingList
+            key={idx}
+            placeTitle={bookingList.name}
+            status={"결제완료"}
+            checkIn={bookingList.checkIn}
+            checkOut={bookingList.checkOut}
+            nightCount={bookingList.stayDuration}
+            headCount={bookingList.headCount}
+            bookingDate={bookingList.bookingDay}
+            price={bookingList.totalPrice + "원"}
+          ></BookingList>
+        ))
+      ) : (
+        <div className={styles["no-booking"]}>예약 내역이 없습니다.</div>
+      )}
+    </div>
+  );
+};
+
+export default BookingLists;

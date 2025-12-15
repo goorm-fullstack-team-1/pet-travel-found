@@ -1,0 +1,17 @@
+.booking-lists {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.no-booking {
+  display: flex;
+  background-color: #FFFFFF;
+  width: 895px;
+  height: 350px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: 1px solid #E8E3D9;
+  padding: 20px;
+  margin-bottom: 16px;
+}

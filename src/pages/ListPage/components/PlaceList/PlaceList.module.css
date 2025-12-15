@@ -1,0 +1,6 @@
+.placeList {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 35px;
+    gap: 23px;
+}
