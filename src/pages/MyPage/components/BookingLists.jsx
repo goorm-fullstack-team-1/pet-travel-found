@@ -1,23 +1,19 @@
 import BookingList from "./BookingList";
 import styles from "./BookingLists.module.css";
-import { localStorageService } from "../../../services/storage/localStorageService";
-import { getLoggedInUserEmail } from "../../../services/auth/authService";
+import { getPayment } from "../../../services/payment/payService";
 
 const BookingLists = () => {
-  const userEmail = getLoggedInUserEmail();
-  const payments = localStorageService.getStorageItem("payment") || [];
-  const bookingLists = payments.filter(
-    (payment) => payment.userEmail === userEmail,
-  );
+  const payments = getPayment();
+  const today = new Date().toISOString().split("T")[0];
 
   return (
     <div className={styles["booking-lists"]}>
-      {bookingLists.length >= 1 ? (
-        bookingLists.map((bookingList, idx) => (
+      {payments.length >= 1 ? (
+        payments.map((bookingList, idx) => (
           <BookingList
             key={idx}
             placeTitle={bookingList.name}
-            status={"결제완료"}
+            status={bookingList.checkOut < today ? "이용완료" : "결제완료"}
             checkIn={bookingList.checkIn}
             checkOut={bookingList.checkOut}
             nightCount={bookingList.stayDuration}
