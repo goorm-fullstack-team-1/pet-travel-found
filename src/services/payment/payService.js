@@ -35,7 +35,7 @@ export const getPayment = () => {
   const { name, email } = sessionStorageService.getStorageItem("user");
   const existingPayments = localStorageService.getStorageItem("payment") || [];
   const duplicatePayments = existingPayments.filter(
-    (p) => p.name === name && p.email === email,
+    (p) => p.userName === name && p.userEmail === email,
   );
   return duplicatePayments || [];
 };
